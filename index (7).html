@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Willow Health Clinic — Compassionate Care, Close to Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== Decorative branch canvas (fixed, ambient) ===== -->
+<div class="branch-ambient" aria-hidden="true">
+  <svg viewBox="0 0 1440 900" preserveAspectRatio="none">
+    <path class="branch-line branch-line--1" d="M -50 40 C 300 20, 500 140, 760 60 S 1200 30, 1500 90" />
+  </svg>
+</div>
+
+<!-- ===== Navbar ===== -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none">
+          <path d="M20 4C20 4 10 12 10 22C10 29.2 14.5 34 20 36C25.5 34 30 29.2 30 22C30 12 20 4 20 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M20 10V33" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M20 16C17 16 14.5 17.5 13 19.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M20 22C23 22 25.5 23.5 27 25.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-name">Willow&nbsp;Health<span class="brand-name-sub">Clinic</span></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#doctors" class="nav-link">Doctors</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#contact" class="btn btn-primary btn-small">Book Appointment</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <svg class="hero-branch" viewBox="0 0 900 700" aria-hidden="true">
+    <path id="heroBranchPath" d="M -20 90 C 160 40, 260 170, 420 120 S 660 60, 760 160 S 880 260, 860 380" />
+    <g class="hero-leaves"></g>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Willow Health Clinic · Est. 2009</span>
+      <h1 class="hero-title">Compassionate care,<br>close to home.</h1>
+      <p class="hero-sub">A private family practice built on unhurried appointments, familiar faces, and medicine that treats the whole person — not just the symptom.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Book an Appointment</a>
+        <a href="#about" class="btn btn-ghost">Learn More</a>
+      </div>
+      <div class="hero-trust">
+        <div class="avatar-stack" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <p><strong>4.9/5</strong> from 1,200+ patients across Pune</p>
+      </div>
+    </div>
+
+    <div class="hero-art reveal" style="--delay:.15s">
+      <svg viewBox="0 0 480 480" class="hero-illustration" role="img" aria-label="Illustration of a doctor greeting a patient beneath a willow tree">
+        <defs>
+          <clipPath id="heroClip"><rect x="0" y="0" width="480" height="480" rx="28"/></clipPath>
+        </defs>
+        <g clip-path="url(#heroClip)">
+          <rect width="480" height="480" fill="var(--sand)"/>
+          <circle cx="240" cy="230" r="190" fill="var(--sage-light)"/>
+          <path d="M-20 380 C 100 340, 380 340, 500 380 L500 500 L-20 500 Z" fill="var(--teal-deep)"/>
+          <path d="M-20 400 C 120 365, 360 365, 500 400 L500 500 L-20 500 Z" fill="var(--teal)"/>
+          <!-- willow tree -->
+          <g transform="translate(360,150)">
+            <path d="M0 40 C -6 90 -6 140 -2 180" stroke="var(--bark)" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <g stroke="var(--sage)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9">
+              <path d="M0 20 C -30 40 -46 90 -40 150"/>
+              <path d="M6 10 C 30 35 44 90 34 150"/>
+              <path d="M-4 30 C -20 55 -28 95 -22 140"/>
+              <path d="M8 30 C 22 55 30 95 22 140"/>
+            </g>
+          </g>
+          <!-- doctor figure -->
+          <g transform="translate(150,190)">
+            <ellipse cx="0" cy="205" rx="48" ry="10" fill="rgba(31,46,44,0.08)"/>
+            <path d="M-38 200 C -38 120 -34 95 0 95 C 34 95 38 120 38 200 Z" fill="#FFFFFF" stroke="var(--teal-deep)" stroke-width="3"/>
+            <circle cx="0" cy="55" r="34" fill="var(--skin)"/>
+            <path d="M-34 45 C -34 10 34 10 34 45 C 34 20 -34 20 -34 45Z" fill="var(--hair)"/>
+            <circle cx="-12" cy="56" r="3" fill="var(--teal-deep)"/>
+            <circle cx="12" cy="56" r="3" fill="var(--teal-deep)"/>
+            <path d="M-10 68 Q0 74 10 68" stroke="var(--teal-deep)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <path d="M-20 95 Q0 115 20 95" stroke="var(--sky)" stroke-width="6" fill="none" stroke-linecap="round"/>
+          </g>
+          <!-- patient figure -->
+          <g transform="translate(270,205)">
+            <ellipse cx="0" cy="190" rx="42" ry="9" fill="rgba(31,46,44,0.08)"/>
+            <path d="M-34 185 C -34 115 -30 90 0 90 C 30 90 34 115 34 185 Z" fill="var(--honey)" stroke="var(--bark)" stroke-width="3"/>
+            <circle cx="0" cy="52" r="31" fill="var(--skin-2)"/>
+            <path d="M-31 40 C -31 6 31 6 31 40 C 20 24 -20 24 -31 40Z" fill="var(--hair-2)"/>
+            <circle cx="-11" cy="53" r="2.6" fill="var(--teal-deep)"/>
+            <circle cx="11" cy="53" r="2.6" fill="var(--teal-deep)"/>
+            <path d="M-8 64 Q0 68 8 64" stroke="var(--teal-deep)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          </g>
+          <!-- floating leaf accents -->
+          <g fill="var(--honey)" opacity="0.85">
+            <ellipse cx="90" cy="90" rx="7" ry="3.5" transform="rotate(30 90 90)"/>
+            <ellipse cx="410" cy="330" rx="8" ry="4" transform="rotate(-20 410 330)"/>
+            <ellipse cx="60" cy="330" rx="6" ry="3" transform="rotate(50 60 330)"/>
+          </g>
+        </g>
+      </svg>
+      <div class="floating-card floating-card--1">
+        <span class="fc-dot"></span>
+        <div><strong>Same-day slots</strong><small>Usually within 24 hrs</small></div>
+      </div>
+      <div class="floating-card floating-card--2">
+        <strong>15+</strong>
+        <small>Years caring for local families</small>
+      </div>
+    </div>
+  </div>
+
+  <svg class="section-divider" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 40 C 240 90 480 0 720 30 S 1200 80 1440 30 V90 H0Z" fill="var(--white)"/>
+  </svg>
+</section>
+
+<!-- ===== About ===== -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-copy reveal">
+      <span class="eyebrow">Our Story</span>
+      <h2>Medicine that remembers your name.</h2>
+      <p>Willow Health Clinic started in a single converted cottage with one doctor, one nurse, and a waiting list of neighbours. Today we're a full family practice — but the promise hasn't changed: real appointment time, honest answers, and care that follows you through every stage of life.</p>
+      <p>We believe good healthcare feels less like a transaction and more like a relationship. That's why our doctors keep smaller patient panels, our nurses know your kids by name, and our follow-ups actually follow up.</p>
+      <a href="#doctors" class="link-arrow">Meet the team who'll remember you <span>→</span></a>
+    </div>
+
+    <div class="stat-grid reveal" style="--delay:.1s">
+      <div class="stat-card">
+        <span class="stat-num" data-count="15">0</span><span class="stat-suffix">+</span>
+        <p>Years in the neighbourhood</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-count="20">0</span><span class="stat-suffix">K+</span>
+        <p>Patients cared for</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-count="98">0</span><span class="stat-suffix">%</span>
+        <p>Patient satisfaction rate</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-count="12">0</span><span class="stat-suffix"></span>
+        <p>Board-certified specialists</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Services ===== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Treat</span>
+      <h2>Care for every chapter, under one roof.</h2>
+      <p class="section-lede">From your first checkup to managing a lifelong condition, our services are built around continuity — the same team, the same records, the same care.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card reveal">
+        <span class="service-icon">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M20 6l3 6 6.6.9-4.8 4.6 1.2 6.6L20 21l-5.9 3.1 1.1-6.6-4.7-4.6L17 12l3-6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M11 30h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <h3>General Checkups</h3>
+        <p>Annual physicals and everyday concerns, handled with unhurried, thorough attention.</p>
+      </article>
+
+      <article class="service-card reveal" style="--delay:.05s">
+        <span class="service-icon">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M14 12c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6-6-2.7-6-6z" stroke="currentColor" stroke-width="1.8"/><path d="M8 34c0-6.6 5.4-12 12-12s12 5.4 12 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <h3>Pediatric Care</h3>
+        <p>Gentle, growth-focused care for infants through teens — with parents in the loop always.</p>
+      </article>
+
+      <article class="service-card reveal" style="--delay:.1s">
+        <span class="service-icon">
+          <svg viewBox="0 0 40 40" fill="none"><rect x="9" y="6" width="22" height="28" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M14 14h12M14 20h12M14 26h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <h3>Diagnostics &amp; Labs</h3>
+        <p>On-site testing and imaging so results reach your doctor — and you — faster.</p>
+      </article>
+
+      <article class="service-card reveal" style="--delay:.15s">
+        <span class="service-icon">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M12 22l6 6 12-14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="1.8"/></svg>
+        </span>
+        <h3>Vaccinations</h3>
+        <p>Full immunization schedules for children and adults, tracked and reminded automatically.</p>
+      </article>
+
+      <article class="service-card reveal" style="--delay:.2s">
+        <span class="service-icon">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M6 22h6l4-10 6 18 4-12 3 4h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Chronic Care</h3>
+        <p>Ongoing management for diabetes, hypertension and more, with quarterly care reviews.</p>
+      </article>
+
+      <article class="service-card reveal" style="--delay:.25s">
+        <span class="service-icon">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M20 34s-11-6.9-11-15.3C9 13.6 12.7 10 17 10c1.9 0 3.7.9 5 2.4 1.3-1.5 3.1-2.4 5-2.4 4.3 0 8 3.6 8 8.7C35 27.1 20 34 20 34z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Mental Wellness</h3>
+        <p>A quiet, judgement-free space to talk through stress, sleep, and everyday mental health.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Doctors ===== -->
+<section class="doctors" id="doctors">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Meet the Doctors</span>
+      <h2>The faces behind your care.</h2>
+      <p class="section-lede">Small panels, real relationships. Here's who you'll actually see.</p>
+    </div>
+
+    <div class="doctors-grid">
+      <article class="doctor-card reveal">
+        <div class="doctor-photo doctor-photo--1" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="100" fill="var(--sage-light)"/><circle cx="100" cy="86" r="38" fill="var(--skin)"/><path d="M56 84c0-30 88-30 88 0-14-12-74-12-88 0Z" fill="var(--hair)"/><path d="M40 200c0-40 27-64 60-64s60 24 60 64Z" fill="#fff"/><path d="M40 200c0-40 27-64 60-64s60 24 60 64" stroke="var(--teal-deep)" stroke-width="3" fill="none"/></svg>
+        </div>
+        <h3>Dr. Anika Rao</h3>
+        <span class="doctor-role">Family Medicine · MBBS, MD</span>
+        <p>18 years treating three generations of the same families. Believes the best diagnosis starts with a real conversation.</p>
+      </article>
+
+      <article class="doctor-card reveal" style="--delay:.08s">
+        <div class="doctor-photo doctor-photo--2" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="100" fill="var(--sky-light)"/><circle cx="100" cy="86" r="38" fill="var(--skin-2)"/><path d="M58 78c6-24 78-24 84 0 -6-6-20-10-42-10s-36 4-42 10Z" fill="var(--hair-2)"/><path d="M40 200c0-40 27-64 60-64s60 24 60 64Z" fill="#fff"/><path d="M40 200c0-40 27-64 60-64s60 24 60 64" stroke="var(--teal-deep)" stroke-width="3" fill="none"/></svg>
+        </div>
+        <h3>Dr. Marcus Chen</h3>
+        <span class="doctor-role">Pediatrics · MBBS, DCH</span>
+        <p>Specializes in newborn through adolescent care. Known around the clinic for his sticker collection and calm bedside manner.</p>
+      </article>
+
+      <article class="doctor-card reveal" style="--delay:.16s">
+        <div class="doctor-photo doctor-photo--3" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="100" fill="var(--honey-light)"/><circle cx="100" cy="86" r="38" fill="var(--skin)"/><path d="M58 90c-4-34 84-34 84 4-10-14-30-20-42-20s-34 6-42 16Z" fill="var(--hair)"/><path d="M40 200c0-40 27-64 60-64s60 24 60 64Z" fill="#fff"/><path d="M40 200c0-40 27-64 60-64s60 24 60 64" stroke="var(--teal-deep)" stroke-width="3" fill="none"/></svg>
+        </div>
+        <h3>Dr. Priya Nair</h3>
+        <span class="doctor-role">Internal Medicine · MD, DM</span>
+        <p>Focused on chronic disease management and preventive care, with a soft spot for long-term patient relationships.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Testimonials ===== -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Patient Stories</span>
+      <h2>Trusted by the families we serve.</h2>
+    </div>
+
+    <div class="carousel reveal" id="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <figure class="testimonial-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"Dr. Rao remembered a detail from my visit two years ago. I didn't have to repeat my entire history — that's rare, and it matters."</blockquote>
+          <figcaption>
+            <span class="quote-avatar" style="background:var(--sage-light)"></span>
+            <div><strong>Fiona Whitfield</strong><small>Patient since 2019</small></div>
+          </figcaption>
+        </figure>
+
+        <figure class="testimonial-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"Our son was terrified of doctors until Dr. Chen. Now he asks when his next checkup is. That alone is worth the drive across town."</blockquote>
+          <figcaption>
+            <span class="quote-avatar" style="background:var(--sky-light)"></span>
+            <div><strong>Rohan Desai</strong><small>Patient since 2021</small></div>
+          </figcaption>
+        </figure>
+
+        <figure class="testimonial-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"Managing my diabetes felt overwhelming everywhere else. Dr. Nair built a plan that actually fits my life, not a textbook."</blockquote>
+          <figcaption>
+            <span class="quote-avatar" style="background:var(--honey-light)"></span>
+            <div><strong>Grace Alonso</strong><small>Patient since 2016</small></div>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="prevBtn" aria-label="Previous testimonial">←</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <button class="carousel-btn" id="nextBtn" aria-label="Next testimonial">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact / Appointment ===== -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <span class="eyebrow">Get in Touch</span>
+      <h2>Let's get you on the schedule.</h2>
+      <p>Fill out the form and our front desk will confirm your slot within one business day — or call us directly for anything urgent.</p>
+
+      <ul class="info-list">
+        <li>
+          <span class="info-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9.5" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <div><strong>Visit Us</strong><span>221 Willowbrook Lane, Pune, MH 411001</span></div>
+        </li>
+        <li>
+          <span class="info-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 14l5 2v4a2 2 0 0 1-2 2C9.5 22 2 14.5 2 7a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+          <div><strong>Call Us</strong><span>+91 20 4567 8899</span></div>
+        </li>
+        <li>
+          <span class="info-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          <div><strong>Email Us</strong><span>hello@willowhealthclinic.com</span></div>
+        </li>
+        <li>
+          <span class="info-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.2 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          <div><strong>Hours</strong><span>Mon–Sat, 8:00 AM – 6:00 PM</span></div>
+        </li>
+      </ul>
+
+      <div class="map-placeholder" role="img" aria-label="Map showing clinic location">
+        <svg viewBox="0 0 400 220" preserveAspectRatio="none">
+          <rect width="400" height="220" fill="var(--sage-light)"/>
+          <path d="M0 60 H400 M0 120 H400 M0 170 H400" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+          <path d="M60 0 V220 M180 0 V220 M300 0 V220" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+          <circle cx="200" cy="110" r="10" fill="var(--teal-deep)"/>
+          <path d="M200 110 a1 1 0 1 0 0.001 0" />
+        </svg>
+        <span class="map-pin">📍 Willow Health Clinic</span>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" id="appointmentForm" style="--delay:.1s">
+      <h3>Request an Appointment</h3>
+      <div class="form-row">
+        <label>
+          <span>Full Name</span>
+          <input type="text" name="name" placeholder="Jordan Blake" required>
+        </label>
+      </div>
+      <div class="form-row form-row--split">
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="jordan@email.com" required>
+        </label>
+        <label>
+          <span>Phone</span>
+          <input type="tel" name="phone" placeholder="+91 98765 43210" required>
+        </label>
+      </div>
+      <div class="form-row">
+        <label>
+          <span>Preferred Date</span>
+          <input type="date" name="date" required>
+        </label>
+      </div>
+      <div class="form-row">
+        <label>
+          <span>Message <em>(optional)</em></span>
+          <textarea name="message" rows="3" placeholder="Tell us a little about your visit..."></textarea>
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">
+        <span class="btn-label">Request Appointment</span>
+      </button>
+      <p class="form-success" id="formSuccess">✓ Thanks! We'll confirm your appointment by email shortly.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="brand brand--footer">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path d="M20 4C20 4 10 12 10 22C10 29.2 14.5 34 20 36C25.5 34 30 29.2 30 22C30 12 20 4 20 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M20 10V33" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Willow&nbsp;Health<span class="brand-name-sub">Clinic</span></span>
+      </a>
+      <p>Compassionate, unhurried family medicine in the heart of Pune since 2009.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.4"/><path d="M8 10v7M8 7.2v.1M12 17v-4.5c0-1.4 1-2.5 2.5-2.5S17 11.1 17 12.5V17" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#doctors">Doctors</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Services</h4>
+      <a href="#services">General Checkups</a>
+      <a href="#services">Pediatric Care</a>
+      <a href="#services">Diagnostics</a>
+      <a href="#services">Vaccinations</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Clinic Hours</h4>
+      <p>Mon – Sat: 8:00 AM – 6:00 PM<br>Sunday: Emergency only</p>
+      <a href="#contact" class="btn btn-outline-light btn-small">Book Appointment</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Willow Health Clinic. All rights reserved.</p>
+    <p class="footer-fine">Designed with care, for care.</p>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
